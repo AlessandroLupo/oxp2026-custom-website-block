@@ -24,7 +24,10 @@ export class Weather extends Interaction {
         ".weather-cards-container": {
             "t-att-class": () => ({ "row": !!this.locationName }),
         },
-        _locationInput: { "t-on-change": this.onInputChange },
+        _locationInput: {
+            "t-on-change": this.onInputChange,
+            "t-att-placeholder": () => this.locationName,
+        },
 
         /* Dynamic selectors: _root, _body, _window, _document */
         // _body: {
@@ -130,7 +133,3 @@ export class Weather extends Interaction {
 registry
     .category("public.interactions")
     .add("custom_website_block_demo.weather", Weather);
-
-registry
-    .category("public.interactions.edit")
-    .add("custom_website_block_demo.weather", { Interaction: Weather });

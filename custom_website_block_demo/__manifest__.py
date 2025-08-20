@@ -29,6 +29,10 @@
     'assets': {
         'web.assets_frontend': [
             'custom_website_block_demo/static/src/interactions/**/*',
+            ('remove', 'custom_website_block_demo/static/src/interactions/**/*.edit.js'),
+        ],
+        'website.assets_inside_builder_iframe': [
+            'custom_website_block_demo/static/src/**/*.edit.js',
         ],
     },
     'license': 'LGPL-3',
