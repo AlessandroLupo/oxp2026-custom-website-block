@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+<!-- Existing shorthand actions are:
+     - classAction
+     - attributeAction
+     - dataAttributeAction
+     - styleAction
+
+     You can combine any of them together, as well as one custom action, on the
+     same option.
+
+     If you need several custom actions on the same option, check for examples
+     of the `compositeAction` (grep `action="'composite'"` in community).
+-->
+<t t-name="interactions_demo.WeatherOption">
+    <BuilderRow label.translate="Default Location">
+        <BuilderTextInput dataAttributeAction="'locationName'"/>
+    </BuilderRow>
+</t>
+
+<t t-name="interactions_demo.WeatherThemeOption">
+    <BuilderRow label.translate="Theme">
+        <!-- BuilderButtonGroup: when one button is active, others are inactive. -->
+        <!-- Other builder components include:
+             - BuilderColorPicker
+             - BuilderCheckbox
+             - BuilderNumberInput
+             - BuilderRange
+             - BuilderDateTimePicker
+             - BuilderUrlPicker
+             - BuilderMany2One / BuilderMany2Many
+             - BuilderList
+        -->
+        <BuilderButtonGroup>
+            <BuilderButton icon="'light_mode'" title.translate="Light" classAction="''"></BuilderButton>
+            <BuilderButton icon="'dark_mode'" title.translate="Dark" classAction="'weather-dark'"></BuilderButton>
+        </BuilderButtonGroup>
+    </BuilderRow>
+</t>
+
+<t t-inherit="website.BuilderOptions" t-inherit-mode="extension">
+    <xpath expr="//t[@id='snippet_specific_options']" position="after">
+        <weather_option
+            template="interactions_demo.WeatherOption"
+            selector=".s_weather"/>
+    </xpath>
+    <xpath expr="//t[@id='snippet_specific_options']" position="after">
+        <weather_theme_option
+            template="interactions_demo.WeatherThemeOption"
+            selector=".s_weather"
+            applyTo=".weather-cards-container"/>
+    </xpath>
+</t>
+
+</templates>
+
+
