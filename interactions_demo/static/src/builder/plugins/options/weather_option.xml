@@ -51,6 +51,9 @@
             selector=".s_weather"
             applyTo=".weather-cards-container"/>
     </xpath>
+    <xpath expr="//layout_option" position="attributes">
+        <attribute name="exclude" add=".s_weather" separator=", "/>
+    </xpath>
 </t>
 
 </templates>
