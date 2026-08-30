@@ -30,7 +30,7 @@
                     </div>
                 </t>
             </div>
-            <div class="align-items-center my-3 weather-cards-container"/>
+            <div class="align-items-center my-3 weather-cards-container o_not_editable"/>
         </div>
     </section>
 </template>

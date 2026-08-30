@@ -34,6 +34,9 @@
         'website.assets_inside_builder_iframe': [
             'custom_website_block_demo/static/src/**/*.edit.js',
         ],
+        'website.website_builder_assets': [
+            'custom_website_block_demo/static/src/builder/**/*',
+        ],
     },
     'license': 'LGPL-3',
 }
