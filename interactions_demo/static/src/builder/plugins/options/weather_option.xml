@@ -17,6 +17,12 @@
     <BuilderRow label.translate="Default Location">
         <BuilderTextInput dataAttributeAction="'locationName'"/>
     </BuilderRow>
+    <BuilderRow label.translate="Title">
+        <BuilderSelect action="'weatherTitle'">
+            <BuilderSelectItem actionValue="'classic'">Classic</BuilderSelectItem>
+            <BuilderSelectItem actionValue="'unicorny'">Unicorny</BuilderSelectItem>
+        </BuilderSelect>
+    </BuilderRow>
 </t>
 
 <t t-name="interactions_demo.WeatherThemeOption">
