@@ -19,12 +19,15 @@ export class Weather extends Interaction {
 
     dynamicContent = {
         ".weather-location-name": {
-            "t-out": () => this.locationName.charAt(0).toUpperCase() + this.locationName.slice(1),
+            "t-out": () => this.locationName?.charAt(0).toUpperCase() + this.locationName?.slice(1),
         },
         ".weather-cards-container": {
             "t-att-class": () => ({ "row": !!this.locationName }),
         },
-        _locationInput: { "t-on-change": this.onInputChange },
+        _locationInput: {
+            "t-on-change": this.onInputChange,
+            "t-att-placeholder": () => this.locationName,
+        },
 
         /* Dynamic selectors: _root, _body, _window, _document */
         // _body: {

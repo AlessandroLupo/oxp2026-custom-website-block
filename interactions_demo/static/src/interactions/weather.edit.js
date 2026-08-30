@@ -9,13 +9,13 @@ import { registry } from "@web/core/registry";
  */
 const WeatherEdit = (I) => class extends I {
     /* Solution 1 */
-    dynamicContent = {
-        ...this.dynamicContent,
-        _locationInput: { },
-    };
+    onInputChange() { }
 
     /* Solution 2 */
-    // onInputChange() { }
+    // dynamicContent = {
+    //     ...this.dynamicContent,
+    //     _locationInput: { },
+    // };
 };
 
 registry

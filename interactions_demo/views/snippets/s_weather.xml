@@ -7,7 +7,7 @@
             <h2 class="h5"><span class="weather-location-name o_not_editable"/>'s Weather</h2>
             <label for="weather-location-input o_not_editable">
                 What's the weather in:
-                <input id="weather-location-input" name="weather-location-input" type="text" placeholder="Brussels"/>
+                <input id="weather-location-input" name="weather-location-input" type="text"/>
             </label>
 
             <!-- "Add snippet" dialog preview with the `.s_dialog_preview` class -->
