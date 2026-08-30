@@ -17,6 +17,9 @@
     <BuilderRow label.translate="Default Location">
         <BuilderTextInput dataAttributeAction="'locationName'"/>
     </BuilderRow>
+    <BuilderRow label.translate="Banner">
+        <BuilderButton action="'weatherAddBanner'" label.translate="Add Banner"/>
+    </BuilderRow>
 </t>
 
 <t t-name="custom_website_block_demo.WeatherThemeOption">
